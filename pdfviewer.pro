@@ -18,9 +18,8 @@ HEADERS += \
 FORMS += \
     pdfviewer.ui
 
-# Пути к Poppler-Qt6 (MSYS2)
-INCLUDEPATH += "/mingw64/include/poppler/qt6"
-LIBS += -L"/mingw64/lib" -lpoppler-qt6
+# Подключаем poppler.pri для правильной настройки Poppler
+include(poppler.pri)
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
